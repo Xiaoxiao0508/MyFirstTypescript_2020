@@ -1,0 +1,15 @@
+.box{
+width:800px;
+height: 300px;
+border: 1px solid;
+}
+.box p1{
+    float: left;
+}
+/* .box p2{
+    float: right; */
+/*  */
+.add{
+    float:right;
+    
+}
