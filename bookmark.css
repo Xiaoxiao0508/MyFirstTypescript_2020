@@ -6,10 +6,6 @@ border: 1px solid;
 .box p1{
     float: left;
 }
-/* .box p2{
-    float: right; */
-/*  */
-.add{
-    float:right;
-    
+.box p2{
+    float: right; 
 }

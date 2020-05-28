@@ -1,5 +1,9 @@
-import { Bookmark } from "./bookmark";
-
+import { Bookmark,Bookmarkitem } from "./bookmark";
+let add=document.getElementById("add") as HTMLButtonElement;
+add.onclick=function(){
 let bookmark1=new Bookmark("w3school","icon")
-let title:string=document.getElementById("Title")?.innerHTML!;
-bookmark1.Title=title;
+let row=document.getElementById("row")
+let bookmarkitem1=new Bookmarkitem(bookmark1);
+bookmarkitem1.setUrl("http://item1")
+}
+
