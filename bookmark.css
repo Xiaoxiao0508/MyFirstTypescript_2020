@@ -9,3 +9,13 @@ border: 1px solid;
 .box p2{
     float: right; 
 }
+#row{
+    clear: both;
+}
+#icon{
+    /* display: inline-block; */
+    float: left;
+}
+.detail{
+    float: left;
+}

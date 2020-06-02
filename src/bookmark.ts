@@ -16,9 +16,15 @@ constructor(Pbookmark:Bookmark){
     this.Bookmark=Pbookmark;
 }
     setUrl(link:string){
-     this.Item=document.getElementById("row");
-    this.Bookmark.Title=document.getElementById("Title")!.innerHTML;
-    this.Bookmark.Icon=document.getElementById("icon")!.innerHTML;
-    link=document.getElementById("url")?.innerHTML!;
+        let row = document.getElementById("row") as HTMLDivElement;
+        let title = document.getElementById("title") as HTMLElement;
+        title.innerHTML = this.Bookmark.Title;
+        let icon = document.getElementById("icon") as HTMLElement;
+        icon.innerHTML=this.Bookmark.Icon;
+        
+        let url=document.getElementById("url") as HTMLElement;
+
+        url.innerHTML=link;
+        
     }
 }
