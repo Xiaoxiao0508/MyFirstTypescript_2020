@@ -27,9 +27,35 @@ export class Bookmarkitem {
 
   spawn(Root: HTMLElement) {
     this.Item = document.createElement("div") as HTMLDivElement;
-    this.Item.appendChild(document.createTextNode(this.Bookmark.Icon));
-    this.Item.appendChild(document.createTextNode(this.Bookmark.Title));
-    this.Item.appendChild(document.createTextNode(this.Bookmark.Link));
+    this.Item.classList.add("bookmark");
+   
+   let Icon=document.createElement("P1");
+  
+
+    // Icon.appendChild(document.createTextNode(this.Bookmark.Icon));
+    // Icon.classList.add("icon");
+    // let Title= document.createElement("h2");
+    // Title.classList.add("title");
+    // Title.appendChild(document.createTextNode(this.Bookmark.Title));
+    // let Link= document.createElement("h3");
+    // Link.classList.add("link");
+    // Link.appendChild(document.createTextNode(this.Bookmark.Link));
+    // this.Item.appendChild(Icon);
+    // this.Item.appendChild(Title);
+    // this.Item.appendChild(Link);
+    // Root.appendChild(this.Item);
+
+    Icon.appendChild(document.createTextNode(this.Bookmark.Icon));
+    Icon.classList.add("icon");
+    let Title= document.createElement("div");
+    Title.appendChild(document.createTextNode(this.Bookmark.Title));
+    Title.appendChild(document.createElement("br"));
+   
+    Title.appendChild(document.createTextNode(this.Bookmark.Link));
+    Title.classList.add("title")
+    this.Item.appendChild(Icon);
+    this.Item.appendChild(Title);
     Root.appendChild(this.Item);
   };
+
 }

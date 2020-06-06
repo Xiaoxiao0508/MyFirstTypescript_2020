@@ -5,26 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="bookmark.css"> -->
+    <style>
+        #list{
+            width: 550px;
+            height: 200px;
+            border: 1px solid;
+        }
+        /* #mark{
+            margin:20px;
+        } */
+        .heading{
+            margin:10px 20px;
+        }
+        #add{
+            float:right;
+           margin-right: 20px;
+        }
+        .bookmark {
+            width: 500px;
+            height: 50px;
+            border: 1px solid;
+            margin:5px 20px;
+        }
+
+        .icon {
+            clear: both;
+            float: left;
+            padding:10px
+        }
+
+        .title {
+            float: left;
+            padding:5px
+
+        }
+    </style>
 </head>
 
 <body>
     <div id="list">
-        <div>
+        <div class="heading">
             <p1 id="mark">Bookmarks</p1>
             <p2 id="add">+</p2>
         </div>
-        <div id="row"></div>
-        <!-- <div id="row">
-            <div id="icon"></div>
-            <div class="detail">
-                <div id="title"></div>
-                <div id="url"></div>
-            </div>
-        </div>
- -->
-
-
-
+        <div id="box"></div>
     </div>
 
     <script type="text/javascript" src="dist/index.js"></script>
