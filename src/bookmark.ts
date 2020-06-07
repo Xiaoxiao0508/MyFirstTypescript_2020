@@ -15,47 +15,39 @@ export class Bookmarkitem {
     this.Bookmark = Pbookmark;
   }
 
-  // let row = document.getElementById("row") as HTMLDivElement;
-  // let title = document.getElementById("title") as HTMLElement;
-  // title.innerHTML = this.Bookmark.Title;
-  // let icon = document.getElementById("icon") as HTMLElement;
-  // icon.innerHTML=this.Bookmark.Icon;
   setUrl(link: string) {
     this.Bookmark.Link = link;
-  };
-
+  }
 
   spawn(Root: HTMLElement) {
     this.Item = document.createElement("div") as HTMLDivElement;
     this.Item.classList.add("bookmark");
-   
-   let Icon=document.createElement("P1");
-  
 
-    // Icon.appendChild(document.createTextNode(this.Bookmark.Icon));
-    // Icon.classList.add("icon");
-    // let Title= document.createElement("h2");
-    // Title.classList.add("title");
-    // Title.appendChild(document.createTextNode(this.Bookmark.Title));
-    // let Link= document.createElement("h3");
-    // Link.classList.add("link");
-    // Link.appendChild(document.createTextNode(this.Bookmark.Link));
-    // this.Item.appendChild(Icon);
-    // this.Item.appendChild(Title);
-    // this.Item.appendChild(Link);
-    // Root.appendChild(this.Item);
-
-    Icon.appendChild(document.createTextNode(this.Bookmark.Icon));
+    let Icon = document.createElement("P1");
+    let symble = document.createElement("img") as HTMLImageElement;
+    symble.src = this.Bookmark.Icon;
+    symble.width = 30;
+    Icon.appendChild(symble);
     Icon.classList.add("icon");
-    let Title= document.createElement("div");
+
+    let Title = document.createElement("div");
     Title.appendChild(document.createTextNode(this.Bookmark.Title));
     Title.appendChild(document.createElement("br"));
-   
     Title.appendChild(document.createTextNode(this.Bookmark.Link));
-    Title.classList.add("title")
+    Title.classList.add("title");
+
+    let fav = document.createElement("img") as HTMLImageElement;
+    fav.src = "https://image.flaticon.com/icons/png/512/14/14815.png";
+    fav.width = 20;
+    fav.classList.add("fav");
+    if (this.Bookmark.Favourite == true)
+      fav.onclick = () => {
+        fav.style.backgroundColor = "red";
+      };
     this.Item.appendChild(Icon);
     this.Item.appendChild(Title);
-    Root.appendChild(this.Item);
-  };
+    this.Item.appendChild(fav);
 
+    Root.appendChild(this.Item);
+  }
 }
