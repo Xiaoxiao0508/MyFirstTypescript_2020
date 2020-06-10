@@ -23,14 +23,15 @@ bookmarkitem1.setUrl("http://item1");
 bookmarkitem2.setUrl("http://item2");
 bookmarkitem3.setUrl("http://item3");
 
-let LIST: Bookmarkitem[] = [];
-LIST.push(bookmarkitem1);
-LIST.push(bookmarkitem2);
+let LIST: Bookmarkitem[] = [bookmarkitem1,bookmarkitem2];
+LIST[0].spawn(box);
+LIST[1].spawn(box);
+
 LIST.push(bookmarkitem3);
 
 add.onclick=()=>{
-let i=0;
-for(i=0;i<LIST.length;i++){
+let i=2;
+for(i=2;i<LIST.length;i++){
     LIST[i].spawn(box);
 }
 }
